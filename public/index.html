@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSpire | Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo">TECH<span>SPIRE</span></a>
+    <span class="nav-tag">TECH EVENT 2026</span>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <div class="pill">✦ THE FUTURE STARTS HERE</div>
+        <h1>Ideas become <span>innovation.</span></h1>
+        <p>
+            Explore technology, unleash your creativity, and connect
+            with the next generation of innovators at TechSpire.
+        </p>
+    </section>
+
+    <section class="event-info">
+        <div class="info-card">
+            <span>📅</span>
+            <div><small>DATE</small><strong>2nd August 2026</strong></div>
+        </div>
+        <div class="info-card">
+            <span>⏰</span>
+            <div><small>TIME</small><strong>10:00 AM</strong></div>
+        </div>
+        <div class="info-card">
+            <span>📍</span>
+            <div><small>LOCATION</small><strong>MWC College Seminar Hall</strong></div>
+        </div>
+    
+    </section>
+
+
+    <section class="registration-card">
+        <div class="form-intro">
+            <div class="form-icon">✧</div>
+            <p class="eyebrow">JOIN THE EXPERIENCE</p>
+            <h2>Event Registration</h2>
+            <p>Complete the form below to register for TechSpire.</p>
+        </div>
+
+        <form id="registrationForm">
+            <div class="form-grid">
+
+                <div class="field">
+                    <label for="name">Full Name <span>*</span></label>
+                    <input id="name" name="name" type="text"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address <span>*</span></label>
+                    <input id="email" name="email" type="email"
+                           placeholder="you@example.com" required>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone Number <span>*</span></label>
+                    <input id="phone" name="phone" type="tel"
+                           placeholder="10-digit mobile number"
+                           pattern="[0-9]{10}"
+                           title="Enter a 10-digit phone number" required>
+                </div>
+
+                <div class="field">
+                    <label for="college">College Name <span>*</span></label>
+                    <input id="college" name="college" type="text"
+                           placeholder="Your college name" required>
+                </div>
+
+                <div class="field">
+                    <label for="department">Department <span>*</span></label>
+                    <input id="department" name="department" type="text"
+                           placeholder="e.g. Computer Science" required>
+                </div>
+
+                <div class="field">
+                    <label for="year">Year of Study <span>*</span></label>
+                    <select id="year" name="year" required>
+                        <option value="">Select your year</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                </div>
+
+                <div class="field full">
+                    <label for="event">Choose Your Event <span>*</span></label>
+                    <select id="event" name="event" required>
+                        <option value="">Select an event</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="AI and Machine Learning">AI & Machine Learning</option>
+                        <option value="Coding Competition">Coding Competition</option>
+                        <option value="Tech Quiz">Tech Quiz</option>
+                        <option value="All Events">All Events</option>
+                    </select>
+                </div>
+
+                <div class="field full">
+                    <label for="comments">Additional Message</label>
+                    <textarea id="comments" name="comments"
+                              placeholder="Tell us anything else (optional)"
+                              rows="3"></textarea>
+                </div>
+
+            </div>
+
+            <div id="message" role="status" aria-live="polite"></div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">
+                <span>Complete Registration</span>
+                <span class="arrow">→</span>
+            </button>
+
+            <p class="form-note">✦ Please check your details before submitting.</p>
+        </form>
+    </section>
+
+    <footer>
+        <a href="#" class="footer-logo">TECH<span>SPIRE</span></a>
+        <p>Built for curious minds. Powered by innovation.</p>
+        <small>© 2026 TechSpire Team</small>
+    </footer>
+
+</main>
+
+<!-- Popup -->
+<div id="popupOverlay" class="popup-overlay" aria-hidden="true">
+    <div class="popup-box" role="dialog" aria-modal="true"
+         aria-labelledby="popupTitle">
+        <button type="button" id="popupClose" class="popup-close"
+                aria-label="Close popup">×</button>
+        <div id="popupIcon" class="popup-icon">✓</div>
+        <h2 id="popupTitle">Registration Successful!</h2>
+        <p id="popupText">Your registration has been submitted.</p>
+        <button type="button" id="popupOk" class="popup-ok">Awesome!</button>
+    </div>
+</div>
+
+</body>
+</html>
